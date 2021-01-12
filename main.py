@@ -1,6 +1,7 @@
 import sys
-
+import urllib3
 from maotai.jd_spider_requests import JdSeckill
+urllib3.disable_warnings()
 
 if __name__ == '__main__':
     a = """
