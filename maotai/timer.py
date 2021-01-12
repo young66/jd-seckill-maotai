@@ -54,7 +54,7 @@ class Timer(object):
         :return:
         """
         url = 'https://a.jd.com//ajax/queryServerData.html'
-        ret = requests.get(url).text
+        ret = requests.get(url, verify=False).text
         js = json.loads(ret)
         return int(js["serverTime"])
 

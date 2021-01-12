@@ -87,7 +87,7 @@ def send_wechat(message):
     headers = {
         'User-Agent': global_config.getRaw('config', 'DEFAULT_USER_AGENT')
     }
-    requests.get(url, params=payload, headers=headers)
+    requests.get(url, params=payload, headers=headers, verify = False)
 
 
 def response_status(resp):

@@ -36,6 +36,7 @@ class SpiderSession:
 
     def _init_session(self):
         session = requests.session()
+        session.verify = False
         session.headers = self.get_headers()
         return session
 
